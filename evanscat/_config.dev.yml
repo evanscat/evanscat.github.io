@@ -11,53 +11,52 @@
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
-# config file for demo site, DELETE IT IF YOU WANT.
+# config file for development,  DELETE IT IF YOU WANT.
 
 
 ## => Site Settings
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://evanscat.github.io
-baseurl : 
-title   : Stupid Earthlings
-description: >
-  A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
+url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl : # does not include hostname
+title   : TeXt Theme
+description: > # this means to ignore newlines until "Language & timezone"
+  TeXt Theme for development.
 
 
 ## => Language and Timezone
 ##############################
-lang: en # the language of your site, default as "en"
-timezone: Asia/Shanghai
+lang: # the language of your site, default as "en"
+timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
   type      : organization # "person" (default), "organization"
-  name      : evanscat
+  name      : TeXt
   url       :
   avatar    : /assets/apple-touch-icon.png
   bio: >
-    TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
-    Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
-  email     : evanscat@163.com
-  facebook  :
-  twitter   : 
-  weibo     : 
-  googleplus: 
-  telegram  :
-  medium    :
-  zhihu     :
-  douban    :
-  linkedin  :
-  github    : evanscat/evanscat.github.io
-  npm       :
+    TeXt Theme for development.
+  email     : 1
+  facebook  : 1
+  twitter   : 1
+  weibo     : 1
+  googleplus: 1
+  telegram  : 1
+  medium    : 1
+  zhihu     : 1
+  douban    : 1
+  linkedin  : 1
+  github    : 1
+  npm       : 1
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: evanscat/evanscat.github.io
+repository: kitian616/jekyll-TeXt-theme
 repository_tree: master
 
 
@@ -65,7 +64,7 @@ repository_tree: master
 ##############################
 paths:
   root    : # title link url, "/" (default)
-  home    : archive # home layout url, "/" (default)
+  home    : /test/ # home layout url, "/" (default)
   archive : # "/archive.html" (default)
   rss     : # "/feed.xml" (default)
 
@@ -80,7 +79,7 @@ license: CC-BY-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
 
 ## TOC
 toc:
-  selectors: # "h1,h2,h3" (default)
+  selectors: "h1,h2,h3,h4,h5,h6" # "h1,h2,h3" (default)
 
 
 ## => Markdown Enhancements
@@ -98,19 +97,19 @@ chart: true # false (default), true
 
 ## => Paginate
 ##############################
-paginate: 8
-paginate_path: /evanscat/page:num # don't change this unless for special need
+paginate: 4
+paginate_path: /test/page:num # don't change this unless for special need
 
 
 ## => Sources
 ##############################
-sources: # bootcdn (default), unpkg
+sources: unpkg # bootcdn (default), unpkg
 
 
 ## => Sharing
 ##############################
 sharing:
-  provider: addthis # false (default), "addtoany", "addthis", "custom"
+  provider: addtoany # false (default), "addtoany", "addthis", "custom"
 
   ## AddThis
   addthis:
@@ -120,8 +119,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
-  # provider: valine
+  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -130,31 +128,31 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : 
-    clientSecret: 
-    repository  : 
-    owner       : 
-    admin:
-      - kitian616
+    clientID    : # GitHub Application Client ID
+    clientSecret: # GitHub Application Client Secret
+    repository  : # GitHub repo
+    owner       : # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+      # - your GitHub Id
 
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
   valine:
-    app_id      : 
-    app_key     : 
+    app_id      : # LeanCloud App id
+    app_key     : # LeanCloud App key
     placeholder : # Prompt information
 
 
 ## => Pageview
 ##############################
 pageview:
-  provider: # false (default), "leancloud", "custom"
+  provider: false # false (default), "leancloud", "custom"
 
   ## Leancloud
   leancloud:
-    app_id    : 
-    app_key   : 
-    app_class : 
+    app_id    : # LeanCloud App id
+    app_key   : # LeanCloud App key
+    app_class : # LeanCloud App class
 
 
 ## => Search
@@ -164,18 +162,18 @@ search:
 
   ## Google Custom Search Engine
   google:
-    custom_search_engine_id: # Google Custom Search Engine ID
+    # custom_search_engine_id: 017643444788069204610:4gvhea_mvga # Google Custom Search Engine ID
 
 
 ## => Analytics
 ##############################
 analytics:
-  provider: google # false (default), "google", "custom"
+  provider: false # false (default), "google", "custom"
 
   ## Google Analytics
   google:
-    tracking_id : UA-71907556-1
-    anonymize_ip: false
+    tracking_id : # Google Analytics id for the site
+    anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
 ## => Build
@@ -204,19 +202,21 @@ exclude:
   - /_posts
   - /index.html
 
-collections_dir: evanscat
+collections_dir: docs
 collections:
   docs:
     output: true
-  notes:
+  sample_page:
     output: true
-  menu:
+  sample_articles:
+    output: true
+  sample_languages:
     output: true
 
 defaults:
   ## home
   - scope:
-      path: ""
+      path: "test"
     values:
       articles:
         excerpt_type: html
@@ -234,7 +234,26 @@ defaults:
       show_edit_on_github: true
       show_subscribe: true
       pageview: true
-      # lightbox: true
+      lightbox: true
+  ## samples
+  - scope:
+      path: ""
+      type: sample_page
+    values:
+      nav_key: samples
+  - scope:
+      path: ""
+      type: sample_articles
+    values:
+      nav_key: samples
+      show_date: false
+  - scope:
+      path: ""
+      type: sample_languages
+    values:
+      layout: article
+      nav_key: samples
+      show_date: false
   ## docs
   - scope:
       path: "_docs/en"
@@ -248,7 +267,7 @@ defaults:
         toc: true
       show_edit_on_github: true
       show_date: false
-      # lightbox: true
+      lightbox: true
   - scope:
       path: "_docs/zh"
     values:
@@ -262,42 +281,15 @@ defaults:
       lang: zh
       show_edit_on_github: true
       show_date: false
-      # lightbox: true
+      lightbox: true
 
-  - scope:
-      path: "_notes"
-    values:
-      layout: article
-      nav_key: notes
-      sidebar:
-        nav: notes-en
-      license: true
-      aside:
-        toc: true
-      lang: zh
-      show_edit_on_github: true
-      show_date: false
-      # lightbox: true
-
-  - scope:
-      path: "_menu"
-    values:
-      layout: article
-      nav_key: menus
-      sidebar:
-        nav: menu-en
-      license: true
-      aside:
-        toc: true
-      lang: zh
-      show_edit_on_github: true
 
 ## => Plugins
 ##############################
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap
+  # - jekyll-sitemap
   - jemoji
 
-data_dir: /evanscat/_data
+data_dir: /docs/_data

@@ -19,8 +19,8 @@
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://evanscat.github.io
-baseurl : 
-title   : Stupid Earthlings
+baseurl : /blog
+title   : An simple blog powerd by jekyll 
 description: >
   A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 
@@ -65,7 +65,7 @@ repository_tree: master
 ##############################
 paths:
   root    : # title link url, "/" (default)
-  home    : archive # home layout url, "/" (default)
+  home    : # home layout url, "/" (default)
   archive : # "/archive.html" (default)
   rss     : # "/feed.xml" (default)
 
@@ -99,7 +99,7 @@ chart: true # false (default), true
 ## => Paginate
 ##############################
 paginate: 8
-paginate_path: /evanscat/page:num # don't change this unless for special need
+paginate_path: /test/page:num # don't change this unless for special need
 
 
 ## => Sources
@@ -208,15 +208,11 @@ collections_dir: evanscat
 collections:
   docs:
     output: true
-  notes:
-    output: true
-  menu:
-    output: true
 
 defaults:
   ## home
   - scope:
-      path: ""
+      path: "test"
     values:
       articles:
         excerpt_type: html
@@ -264,33 +260,6 @@ defaults:
       show_date: false
       # lightbox: true
 
-  - scope:
-      path: "_notes"
-    values:
-      layout: article
-      nav_key: notes
-      sidebar:
-        nav: notes-en
-      license: true
-      aside:
-        toc: true
-      lang: zh
-      show_edit_on_github: true
-      show_date: false
-      # lightbox: true
-
-  - scope:
-      path: "_menu"
-    values:
-      layout: article
-      nav_key: menus
-      sidebar:
-        nav: menu-en
-      license: true
-      aside:
-        toc: true
-      lang: zh
-      show_edit_on_github: true
 
 ## => Plugins
 ##############################

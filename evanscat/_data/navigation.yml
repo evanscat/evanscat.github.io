@@ -1,18 +1,11 @@
 header:
   - title:      Home
-    url:        /docs/en/quick-start
+    url:        /archive
   - title:      Docs
-    url:        /docs/en/quick-start
+    url:        /menu/index
     key:        docs
-  - title:      Samples
-    url:        /samples.html
-    key:        samples
-  - title:      Archive
-    url:        /archive.html
-  - title:      About
-    url:        /about.html
   - title:      GitHub
-    url:        https://github.com/kitian616/jekyll-TeXt-theme
+    url:        https://github.com/evanscat/evanscat.github.io
 
 
 docs-en:
@@ -73,6 +66,19 @@ docs-en:
       - title:  中文
         url:    /docs/zh/quick-start
 
+notes-en:
+  - title:      Archive Notes
+    children:
+      - title:  shell script
+        url:    /notes/linux/shellscript
+
+menu-en:
+  - title:      Menu 
+    children:
+      - title:  Notes
+        url:    /notes/linux/shellscript
+      - title:  Quick Start
+        url:    /docs/en/quick-start
 
 docs-zh:
   - title:      开始
