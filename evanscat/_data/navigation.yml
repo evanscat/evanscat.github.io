@@ -67,10 +67,29 @@ docs-en:
         url:    /docs/zh/quick-start
 
 notes-en:
-  - title:      Archive Notes
+  - title:  Linux
     children:
       - title:  shell script
         url:    /notes/linux/shellscript
+      - title:  echo
+        url:    /notes/linux/echo
+  - title:  Golang
+    children:
+      - title:  Spacing
+        url:    /docs/en/spacing
+      - title:  Grid
+        url:    /docs/en/grid
+  - title:  Docker
+    children:
+      - title:  Spacing
+        url:    /docs/en/spacing
+      - title:  Grid
+        url:    /docs/en/grid
+  - title:  Other
+    children:
+      - title:  template
+        url:    /notes/template/
+              
 
 menu-en:
   - title:      Menu 
