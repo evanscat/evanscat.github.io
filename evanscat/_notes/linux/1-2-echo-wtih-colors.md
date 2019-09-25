@@ -1,7 +1,7 @@
 ---
 title: echo
 mathjax: true
-permalink: /notes/linux/echo
+permalink: /notes/linux/echo.html
 key: notes-linux-echo
 ---
 
