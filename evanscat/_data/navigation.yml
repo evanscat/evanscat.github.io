@@ -1,8 +1,11 @@
 header:
   - title:      Home
     url:        /archive
+  - title:      Notes
+    url:        /notes/template
+    key:        notes
   - title:      Docs
-    url:        /menu/index
+    url:        /docs/en/quick-start
     key:        docs
   - title:      GitHub
     url:        https://github.com/evanscat/evanscat.github.io
